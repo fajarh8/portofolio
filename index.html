@@ -3,76 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Fajar's Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Fajar | Web Developer</title>
+  <link rel="stylesheet" href="assets/css/style.css"> <!-- Nanti buat CSS-nya terpisah -->
 </head>
-<body class="font-sans text-gray-800 bg-gray-50">
+<body>
 
   <!-- Navbar -->
-  <nav class="bg-white shadow-md sticky top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <div class="text-2xl font-bold">Ied Fajar Heryan</div>
-      <ul class="flex space-x-6">
-        <li><a href="#about" class="hover:text-blue-500">About</a></li>
-        <li><a href="#skills" class="hover:text-blue-500">Skills</a></li>
-        <li><a href="#projects" class="hover:text-blue-500">Projects</a></li>
-        <li><a href="#contact" class="hover:text-blue-500">Contact</a></li>
-      </ul>
+  <nav class="navbar">
+    <div class="logo"><img src="https://picsum.photos/200" alt="Logo" class="logo-img"> Ied Fajar Heryan</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
     </div>
   </nav>
 
   <!-- Hero Section -->
-  <section id="hero" class="flex flex-col items-center justify-center text-center h-screen bg-gradient-to-r from-blue-400 to-indigo-500 text-white">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm Fajar</h1>
-    <p class="text-xl md:text-2xl">Web Developer based in Semarang</p>
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Hi, I'm Fajar</h1>
+      <p>Building modern and reliable web applications.</p>
+      <div class="cta-buttons">
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="#contact" class="btn-outline">Contact Me</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="https://picsum.photos/200" alt="Fajar">
+    </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="container mx-auto py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-8">About Me</h2>
-    <p class="max-w-3xl mx-auto text-center text-lg">
-      I am passionate about building web applications using Laravel and modern frontend technologies.
-      Always learning, always growing.
-    </p>
+  <!-- Recent Projects Preview -->
+  <section class="recent-projects">
+    <h2>Recent Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">Project 1</div>
+      <div class="project-card">Project 2</div>
+    </div>
+    <div id="see-projects-btn">
+      <a href="#projects" class="btn">See All Projects</a>
+    </div>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about" class="main-section about-me">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <img src="https://picsum.photos/200" alt="About Me">
+      <div class="about-text">
+        <p>Short bio here...</p>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h4>Education</h4>
+            <p>Description...</p>
+          </div>
+          <div class="timeline-item">
+            <h4>First Job</h4>
+            <p>Description...</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Now</h4>
+            <p>Description...</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Skills Section -->
-  <section id="skills" class="bg-white py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
-    <div class="flex flex-wrap justify-center gap-6">
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">PHP (Laravel)</span>
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">JavaScript</span>
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">MySQL</span>
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Internet of Things (IoT)</span>
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Git & GitHub</span>
-      <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">HTML, CSS, TailwindCSS</span>
+  <section id="skills" class="main-section skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h3>Frontend</h3>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Backend</h3>
+        <ul>
+          <li>PHP</li>
+          <li>Laravel</li>
+          <li>MySQL</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Tools & Others</h3>
+        <ul>
+          <li>Git</li>
+          <li>Docker</li>
+          <li>Figma</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <!-- Projects Section -->
-  <section id="projects" class="container mx-auto py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-8">Projects</h2>
-    <div class="grid md:grid-cols-2 gap-10">
-      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
-        <h3 class="text-2xl font-semibold mb-2">Smart Kos IoT</h3>
-        <p class="mb-4">A kos management with IoT.</p>
-        <a href="https://smartkos.solusi-iot.site" target="_blank" class="text-blue-500 hover:underline">View Page</a>
-      </div>
-      <!-- Bisa tambah project lainnya -->
+  <section id="projects" class="main-section projects">
+    <h2>Projects</h2>
+    <div class="filter-bar">
+      <button class="filter-btn">All</button>
+      <button class="filter-btn">Web Development</button>
+      <button class="filter-btn">Mobile App</button>
+      <button class="filter-btn">API</button>
+    </div>
+    <div class="project-grid">
+      <div class="project-card">Project 1</div>
+      <div class="project-card">Project 2</div>
+      <!-- Tambah projek lainnya -->
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="bg-gray-100 py-20 px-6">
-    <h2 class="text-3xl font-bold text-center mb-8">Contact</h2>
-    <p class="text-center mb-4">Email: <a href="mailto:fajar0heryan@gmail.com" target="_blank" class="text-blue-500 hover:underline"></a>fajar0heryan@gmail.com</p>
-    <!-- <p class="text-center mb-4">WhatsApp: +62-812-3456-7890</p> -->
-    <p class="text-center">LinkedIn: <a href="https://linkedin.com/in/iedfajarheryan" target="_blank" class="text-blue-500 hover:underline">Ied Fajar Heryan</a></p>
+  <section id="contact" class="main-section contact">
+    <h2>Contact Me</h2>
+    <p>Interested in working together? Let's connect.</p>
+    <p>Email: <a href="mailto:fajar0heryan@gmail.com">fajar0heryan@gmail</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/iedfajarheryan" target="_blank">Ied Fajar Heryan</a></p>
+    <p>GitHub: <a href="https://github.com/fajarh8" target="_blank">fajarh8</a></p>
+    <p>Instagram: <a href="https://instagram.com/fajar.h8" target="_blank">@fajar.h8</a></p>
+    <!-- <p>Phone: <a href="tel:+628123456789">+62 812-3456-789</a></p>
+    <p>Telegram: <a href="https://t.me/fajar" target="_blank">@fajar</a></p>
+    <p>WhatsApp: <a href="https://wa.me/628123456789" target="_blank">+62 812-3456-789</a></p> -->
+    <!-- <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form> -->
   </section>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="assets/js/script.js"></script>
 
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 Ied Fajar Heryan. All rights reserved.</p>
+  </footer>
+  
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
